@@ -1,0 +1,81 @@
+@page "/post/{filename}"
+@using Models
+@using Services
+@inject IPostService PostService
+
+<style>
+    #post-content {
+        background-color: white;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    #post-content h1 {
+        margin-bottom: 2rem;
+    }
+
+    #post-content h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    #post-content img {
+        max-width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #post-content blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid;
+        border-left-color: var(--navbar-background-color);
+        margin:	1.5em 10px;
+        padding: .5em 10px;
+        quotes:	"\201C""\201D""\2018""\2019";
+    }
+
+    #post-content blockquote p {
+        display: inline;
+    }
+
+    #head-image {
+        object-fit: cover;
+        height: 15rem;
+        padding: 0;
+    }
+</style>
+
+@if (!string.IsNullOrEmpty(Post.HeadImagePath))
+{
+    <div class="container">
+        <img src="@Post.HeadImagePath" class="img-fluid rounded mx-auto d-block col-md-12" id="head-image" alt="@(Post.Title)-image" />
+    </div>
+}
+
+<div class="container rounded line-numbers" id="post-content">
+    @HtmlContent
+
+    <div class="blockquote text-right mt-5">
+        <footer class="blockquote-footer">@Post.Author, <cite title="Source Title">@Post.PublishDate.ToShortDateString()</cite></footer>
+    </div>
+</div>
+
+@code {
+    [Inject] private IJSRuntime _js { get; set; }
+    [Parameter] public string Filename { get; set; }
+
+    public Post Post { get; set; } = new Post();
+    public MarkupString HtmlContent { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Post = await PostService.GetPostAsync(Filename);
+        HtmlContent = new MarkupString(Post.Body);
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await _js.InvokeVoidAsync("Prism.highlightAll");
+    }
+}
