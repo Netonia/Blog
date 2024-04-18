@@ -18,7 +18,7 @@ jobs:
       run: dotnet publish ./${{ github.event.repository.name }}/${{ github.event.repository.name }}.csproj -c Release -o release --nologo
     
     - name: Change base-tag in index.html from / to my Repository Name
-      run: sed -i 's/<base href="\/" \/>/<base href="\/{{ github.event.repository.name }}\/" \/>/g' release/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/${{ github.event.repository.name }}\/" \/>/g' release/wwwroot/index.html
     
     - name: Fix service-worker-assets.js hashes
       working-directory: release/wwwroot
