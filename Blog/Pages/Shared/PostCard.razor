@@ -1,11 +1,11 @@
-﻿@using Models
+@using Models
 @using Services
 @inject IPostService PostService
 
 <div class="card my-5">
     @if (!string.IsNullOrEmpty(Post.HeadImagePath))
     {
-        <img class="card-img-top" src="@Post.HeadImagePath" alt="Post image cap">
+        <img class="card-img-top" src="@Post.HeadImagePath" alt="">
     }
     <div class="card-body">
         <h5 class="card-title">@Post.Title</h5>
