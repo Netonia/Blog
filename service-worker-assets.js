@@ -33,11 +33,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-1ZaWLegaqxWvbY+SXYeP3IrF3gRsPrP5qL60Zghsaa8=",
+      "hash": "sha256-yHzVBgkb7Cg0QDk9dGYgOxCmE6pyts0fL5T3VuJz9dk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
-      "hash": "sha256-cRAMsLvVufjk7ukYrTXh3YuvtjAmOlqUl5ZORrYLc+U=",
+      "hash": "sha256-Epj1hD09Eo0o1uhEIHNIrAYz+Z0BTpbGCPziAXWr2TU=",
       "url": "_framework\/Blog.wasm"
     },
     {
@@ -217,15 +217,23 @@
       "url": "Blog.styles.css"
     },
     {
-      "hash": "sha256-E4tXi7wPavhzeGnnwwY3nbQWwntIPGR3fNv+Xcbv4Xw=",
+      "hash": "sha256-RSgqEs8ffPWg7dNBw6yBlmr59KoPuk2buIh1irlU9wI=",
       "url": "assets\/posts\/documents\/2012-01-31-hello-world.md"
     },
     {
-      "hash": "sha256-HvJvz1tUst0uj4dHZLA3Q56fXv1erJ5SsGUpV1l7m4M=",
-      "url": "assets\/posts\/images\/cover.png"
+      "hash": "sha256-WN1np1CkdvzGmQVVtvY+eVC2t6504HccGwuiyFmNZfo=",
+      "url": "assets\/posts\/documents\/2012-01-31-hello-world2.md"
     },
     {
-      "hash": "sha256-IH2\/QhFbo\/sxsrbLy0TDw0K6YFJ5+K56q6YxSeQoVws=",
+      "hash": "sha256-5d+6UggsS\/jxofeob03GvYQAuFsAW1FiSV4bxLECTRg=",
+      "url": "assets\/posts\/images\/helloworld.png"
+    },
+    {
+      "hash": "sha256-43XIDmYUZr9ZErbvi8eoye7BuIESaRXaAr1KsKHgRnQ=",
+      "url": "assets\/posts\/images\/helloworld2.png"
+    },
+    {
+      "hash": "sha256-r0e0wAxKmiTWEdLCrLfE2Z+oxeQqYUSqvJ8o8bdvPOY=",
       "url": "assets\/posts\/post-list.json"
     },
     {
@@ -265,5 +273,5 @@
       "url": "manifest.webmanifest"
     }
   ],
-  "version": "OeKCI35b"
+  "version": "mAMNOg7x"
 };

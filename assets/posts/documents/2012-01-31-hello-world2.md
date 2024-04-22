@@ -1,7 +1,7 @@
 ---
 title: Hello World!
 author: agriffard
-headImagePath: assets/posts/images/helloworld.png
+headImagePath: assets/posts/images/helloworld2.png
 summary: Hello, World! programs are often the first a student learns to write in a given language.
 publishDate: 2012-01-31
 categories: [Dev]
